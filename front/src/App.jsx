@@ -5,10 +5,10 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch(import.meta.env.VITE_API, { mode: "no-cors" });
+      const res = await fetch(import.meta.env.VITE_API);
       const data = await res.json();
 
-      // setMessage(data.status);
+      setMessage(data.status);
     }
 
     fetchData();
