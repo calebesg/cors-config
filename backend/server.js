@@ -3,17 +3,17 @@ const cors = require("cors");
 
 const app = express();
 
-const allowCrossDomain = (req, res, next) => {
-  res.header(`Access-Control-Allow-Origin`, [
-    "https://cors-config-j1yd.vercel.app",
-    "*",
-  ]);
-  res.header(`Access-Control-Allow-Methods`, `GET,PUT,POST,DELETE`);
-  res.header(`Access-Control-Allow-Headers`, `Content-Type`);
-  next();
-};
+// const allowCrossDomain = (req, res, next) => {
+//   res.header(`Access-Control-Allow-Origin`, [
+//     "https://cors-config-j1yd.vercel.app",
+//     "*",
+//   ]);
+//   res.header(`Access-Control-Allow-Methods`, `GET,PUT,POST,DELETE`);
+//   res.header(`Access-Control-Allow-Headers`, `Content-Type`);
+//   next();
+// };
 
-app.use(allowCrossDomain);
+// app.use(allowCrossDomain);
 app.use(cors());
 app.use(express.json());
 
