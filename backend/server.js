@@ -11,7 +11,7 @@ const allowCrossDomain = (req, res, next) => {
   next();
 };
 
-app.use(cors());
+// app.use(cors());
 app.use(allowCrossDomain);
 app.use(express.json());
 
