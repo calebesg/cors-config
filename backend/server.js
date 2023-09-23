@@ -4,11 +4,11 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors({ origin: process.env.DOMAIN_ALLOW_ACCESS }));
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
   return res.json({ status: "ok" });
 });
 
-app.listen(3333, console.log("APP RUNING"));
+app.listen(process.env.PORT || 3333, console.log("APP RUNING"));
